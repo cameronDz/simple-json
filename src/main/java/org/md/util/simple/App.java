@@ -44,14 +44,16 @@ public class App {
 	 * @return
 	 */
 	private static String createJsonArrayString(List<Integer> list) {
-		String array = "[]";
-		ObjectMapper mapper = new ObjectMapper();
+		StringBuilder sb = new StringBuilder();
+		sb.append("var list = '");
 		try {
-			array = mapper.writeValueAsString(list);
+			ObjectMapper mapper = new ObjectMapper();
+			sb.append(mapper.writeValueAsString(list));
 		} catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-		return array;
+		sb.append("'");
+		return sb.toString();
 	}
 
 	/**
