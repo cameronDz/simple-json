@@ -18,3 +18,4 @@ To configure Jenkin's to allow for external .css and .js files to pulled in from
 ```
 System.setProperty("hudson.model.DirectoryBrowserSupport.CSP", "sandbox allow-scripts; default-src 'self'; style-src 'self' 'unsafe-inline'; script-src * 'unsafe-inline';")
 ```
+Using the Script Console requires re-entering the property every restart of Jenkins.
