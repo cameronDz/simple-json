@@ -6,6 +6,6 @@ node {
         sh 'mvn clean install exec:java -Dexec:mainClass'
     }
     stage('archive artifact') {
-        archiveArtifacts artifacts: 'target/list.js'
+        archiveArtifacts artifacts: 'target/index.html'
     }
 }
