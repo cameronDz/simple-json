@@ -3,6 +3,9 @@ package org.md.util.simple;
 import java.util.List;
 
 /**
+ * PoC project for Jenkins/Reporting. Create a list of random integers and write
+ * list in index.html file as a variable replacing a specific line.
+ * 
  * @author Cameron
  */
 public class App {
