@@ -2,6 +2,8 @@ package org.md.util.simple;
 
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -11,6 +13,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author Cameron
  */
 public class JavaScripVariableCreator {
+
+	private final static Logger LOG = Logger.getLogger(JavaScripVariableCreator.class);
 
 	/**
 	 * Empty constructor
@@ -36,7 +40,7 @@ public class JavaScripVariableCreator {
 				ObjectMapper mapper = new ObjectMapper();
 				sb.append(mapper.writeValueAsString(list));
 			} catch (JsonProcessingException e) {
-				e.printStackTrace();
+				LOG.error(e);
 			}
 		}
 		sb.append("'");

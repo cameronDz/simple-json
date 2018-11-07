@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import org.apache.log4j.Logger;
+
 /**
  * Used to updated an index.html page with a JavaScript variable String to be
  * used in Chart.js chart.
@@ -13,6 +15,7 @@ import java.io.IOException;
  * @author Cameron
  */
 public class FileModifier {
+	private final static Logger LOG = Logger.getLogger(FileModifier.class);
 
 	private static final String PLACE_HOLDER_CONTENT = "/* REPLACE THIS LINE WITH REPORT GENERATED OBJECT */";
 	private static final String ORIGINAL_INDEX = "src/main/resources/index.html";
@@ -65,7 +68,7 @@ public class FileModifier {
 			}
 			reader.close();
 		} catch (IOException e) {
-			e.printStackTrace();
+			LOG.error(e);
 		}
 		return sb.toString();
 	}
@@ -81,9 +84,8 @@ public class FileModifier {
 			FileWriter writer = new FileWriter(new File(MODIFIED_INDEX));
 			writer.write(modifiedIndexFile);
 			writer.close();
-
 		} catch (IOException e) {
-			e.printStackTrace();
+			LOG.error(e);
 		}
 	}
 
