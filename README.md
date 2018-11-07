@@ -5,8 +5,10 @@ Project used to create a simple Json array in a /target directory. Usage is orig
 Basic run commands
 
 ```
-mvn clean install
-mvn exec:java -Dexec.mainClass
+mvn clean install exec:java -Dexec.mainClass
 ```
 
-Running above commands will run the application, producing a 'list.json' file in the /target directory.
+Running above command will run the application, producing a 'list.js' file in the /target directory.
+
+## Jenkin Configs ##
+In order to display the report in ... TODO fill out
