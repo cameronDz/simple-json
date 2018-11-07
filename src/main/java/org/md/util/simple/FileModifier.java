@@ -12,7 +12,7 @@ import java.io.IOException;
  * 
  * @author Cameron
  */
-public class FileAchiever {
+public class FileModifier {
 
 	private static final String PLACE_HOLDER_CONTENT = "/* REPLACE THIS LINE WITH REPORT GENERATED OBJECT */";
 	private static final String ORIGINAL_INDEX = "src/main/resources/index.html";
@@ -21,7 +21,7 @@ public class FileAchiever {
 	/**
 	 * Empty constructor
 	 */
-	public FileAchiever() {
+	public FileModifier() {
 		super();
 	}
 
