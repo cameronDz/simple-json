@@ -8,4 +8,15 @@ node {
     stage('archive artifact') {
         archiveArtifacts artifacts: 'target/index.html'
     }
+    stage('publish report') {
+        publishHTML([
+            allowMissing: false, 
+            alwaysLinkToLastBuild: false, 
+            keepAll: false, 
+            reportDir: 'target', 
+            reportFiles: 'index.html', 
+            reportName: 'HTML Report', 
+            reportTitles: ''
+        ])
+    }
 }
