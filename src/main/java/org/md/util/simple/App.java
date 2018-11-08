@@ -11,7 +11,8 @@ import java.util.List;
 public class App {
 	public static void main(String[] args) {
 		List<Integer> list = new RandomNumberListGenerator().createListOfRandomIntegers(1, 100, 100);
-		String jsArray = new JavaScripVariableCreator().createJavaScriptArrayString(list);
+		List<Integer> rollingAverage = new RollingAverageCalculator().calculateRollingAverage(list);
+		String jsArray = new JavaScripVariableCreator().createJavaScriptArrayString(rollingAverage);
 		new FileModifier().modifyIndexFile(jsArray);
 	}
 }
