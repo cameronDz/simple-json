@@ -8,7 +8,7 @@ Basic run commands
 mvn clean install exec:java -Dexec.mainClass
 ```
 
-Running above command will run the application, producing a 'list.js' file in the /target directory.
+Running above command runs the application, which will produce an 'index.html' file in the /target directory. That contains a generated graph of random points using Charts.js framework.
 
 ## Jenkin Configs ##
 The pipeline Jenkinsfile is located in src/main/resources directory. In Jenkin's pull the pipeline from this location.
