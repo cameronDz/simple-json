@@ -2,7 +2,8 @@ package org.md.util.simple;
 
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -14,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  */
 public class JavaScripVariableCreator {
 
-	private final static Logger LOG = Logger.getLogger(JavaScripVariableCreator.class);
+	private final static Logger LOG = LogManager.getLogger();
 
 	/**
 	 * Empty constructor

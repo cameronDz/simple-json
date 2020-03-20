@@ -6,7 +6,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Used to updated an index.html page with a JavaScript variable String to be
@@ -15,7 +16,7 @@ import org.apache.log4j.Logger;
  * @author Cameron
  */
 public class FileModifier {
-	private final static Logger LOG = Logger.getLogger(FileModifier.class);
+	private final static Logger LOG = LogManager.getLogger();
 
 	private static final String PLACE_HOLDER_CONTENT = "/* REPLACE THIS LINE WITH REPORT GENERATED OBJECT */";
 	private static final String ORIGINAL_INDEX = "src/main/resources/index.html";
